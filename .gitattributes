@@ -1,6 +1,5 @@
 # Forcer la détection de Java et TypeScript (Angular)
 *.java linguist-language=Java
-*.ts linguist-language=TypeScript
 
 # Exclure les fichiers qui ne doivent pas influencer la détection
 *.html linguist-detectable=false
