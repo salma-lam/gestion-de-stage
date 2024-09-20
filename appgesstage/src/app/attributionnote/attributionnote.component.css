@@ -1,0 +1,98 @@
+body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	min-height: 100vh;
+	font-family: 'Arial','Jost', sans-serif;
+	background: white;
+}
+.main{
+	width: 400px;
+	height: 600px;
+	margin-top: 20px;
+    margin-left: 600px;
+    justify-content: center;
+	background: rgb(255, 255, 255);
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+}
+#chk{
+	display: none;
+    font-size: 25px;
+}
+label{
+	color: #000000;
+	font-size: 16px;
+    padding-left: 50px;
+	display: flex;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+input{
+	width: 60%;
+	height: 30px;
+	background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+	justify-content: center;
+	display: flex;
+	margin: 20px auto;
+	outline: 5px;
+	
+	font-size: 15px;
+    color: #000;
+}
+.title{
+    text-align: center;
+    color: #8902b3;
+    font-size: 25px;
+	font-family: Arial Black;
+}
+.color{
+    color: #573b8a;
+}
+button{
+	width: 50%;
+	height: 40px;
+	margin: 20px auto;
+	justify-content: center;
+	display: block;
+	color: #ffffff;
+	background: #8902b3;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+button:hover{
+	background: #b77dc9;
+}
+#chk:checked ~ .login{
+	transform: translateY(-500px);
+}
+#chk:checked ~ .login label{
+	transform: scale(1);	
+}
+#chk:checked ~ .signup label{
+	transform: scale(.6);
+}
+.h{
+    text-align: center;
+	font-family: Arial Black;
+    font-size: 30px;
+    color: #000000;
+}
+.w3-bar-block{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+}
+span{
+	color: rgb(255, 255, 255);
+	font-size: 15px;
+}

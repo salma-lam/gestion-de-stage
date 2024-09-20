@@ -1,0 +1,40 @@
+.main{
+    background: linear-gradient(to bottom, #ece7f5, #d1c3ec, #ded4f0);
+    background: url(photo.jpeg) no-repeat center center fixed;
+    background-size: 800px;
+	background-position: 75%;
+	margin-left: 200px;
+	padding: 350px;
+}
+
+.img{
+    background: url(home.jpeg) no-repeat center center fixed;
+    background-size: 800px;
+
+}
+#h1{
+  
+	font-family: popppins ;
+    font-size: 50px;
+    margin-left: 750px;
+    color: #573b8a;
+}
+#h2{
+    text-align: center;
+	font-family: Arial Black;
+    font-size: 25px;
+    color: #573b8a;
+}
+.w3-bar-block{
+    color: #ffffff;
+    font-size: 17px;
+}
+span{
+    color: #ffffff;
+}
+body{
+    background-color:rgb(255, 255, 255)
+}
+h1{
+    margin-left: 700px;
+}

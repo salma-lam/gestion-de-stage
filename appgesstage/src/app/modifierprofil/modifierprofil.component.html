@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gestion Stage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+</head>
+<body>
+
+<nav class="w3-sidebar w3-collapse  w3-animate-left " style="z-index:3;width:300px;background: linear-gradient(to bottom, #58447e, #8902b3);" id="mySidebar"><br>
+	
+	<div class="w3-container w3-row">
+	  <div class="w3-col s4">
+		<img src="etudiant.png" class="w3-circle w3-margin-right" style="width:50px" >
+	  </div>
+	  <div class="w3-col s8 w3-bar">
+		<span>Bienvenue  <strong><span style="color: rgb(243, 29, 29);">{{stage.cne}} </span></strong></span>
+      </div>
+    </div>
+    <hr>
+    <div class="w3-container">
+      <h2 id="h1" style="color:rgb(255, 255, 255);"><b>Espace Etudiant</b></h2>
+    </div>
+	<br><br><br>
+	<div class="w3-bar-block" >&nbsp;&nbsp;
+		<svg xmlns="http://www.w3.org/2000/svg"  width="19" height="19" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+			<path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
+		  </svg>
+		  
+		  <a   routerLink="stage"  (click)="hom(stage.cne)"><i class="bi bi-house" ></i>&nbsp;&nbsp; Home</a><br><br>&nbsp;&nbsp;
+		  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+			<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+		  </svg><a  class="ajout" routerLink="stage" (click)="sta(stage.cne)"><i class="bi bi-plus-circle-fill"></i>&nbsp;&nbsp; Ajouter Stage </a><br><br>
+		  &nbsp;&nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-stickies-fill" viewBox="0 0 16 16">
+			<path d="M0 1.5V13a1 1 0 0 0 1 1V1.5a.5.5 0 0 1 .5-.5H14a1 1 0 0 0-1-1H1.5A1.5 1.5 0 0 0 0 1.5z"/>
+			<path d="M3.5 2A1.5 1.5 0 0 0 2 3.5v11A1.5 1.5 0 0 0 3.5 16h6.086a1.5 1.5 0 0 0 1.06-.44l4.915-4.914A1.5 1.5 0 0 0 16 9.586V3.5A1.5 1.5 0 0 0 14.5 2h-11zm6 8.5a1 1 0 0 1 1-1h4.396a.25.25 0 0 1 .177.427l-5.146 5.146a.25.25 0 0 1-.427-.177V10.5z"/>
+		  </svg>
+            <a   routerLink="document" (click)="docu(stage.cne)"  ><i class="bi bi-stickies-fill"></i>&nbsp; Deposer document</a><br><br>
+            <a  class="w3-bar-item w3-button w3-padding" (click)="modifierpro(stage.cne)" ><i class="fa fa-users fa-fw"></i>&nbsp; Modifier le profil</a><br>
+            <a  class="w3-bar-item w3-button w3-padding "  (click)="visualiservalis(stage.cne)"><i class="fa fa-eye fa-fw"></i>&nbsp; Validation de stage</a><br>
+
+    </div>
+  </nav>
+ 
+
+	<div class="main">  	
+	<h3 class="title"><b>Modifier le profil</b></h3>
+	<br>
+	<br>
+	<form  >
+		<table>
+			<tr>
+				<td><label for="cnr" class="form-label"  >CNE : </label></td>
+				<td><label for="intitule" class="form-label" class="td1">Intitule : </label></td>
+			</tr>
+			<tr>
+				<td><input disabled="disabled" class="form-control" type="text" class="form-control" placeholder="" id="cne" name="cne"  [(ngModel)]="stage.cne"></td>
+				<td><input class="form-control" type="text" class="form-control" id="intitule" name="intitule" [(ngModel)]="stage.intitule"></td>	
+			</tr>				
+			<tr>
+				<td><label for="entreprise" class="form-label">Entreprise : </label></td>
+				<td><label for="emailEntre" class="form-label">Email de l'entreprise : </label></td>
+			</tr>
+			<tr>
+				<td><input class="form-control" type="text" class="form-control" id="entreprise"  name="entreprise" [(ngModel)]="stage.entreprise"></td>
+				<td><input class="form-control" type="email" class="form-control" id="emailEntre" name="emailEntre" [(ngModel)]="stage.emailEntre"></td>
+			</tr>
+			<tr>
+				<td><label for="encadrantStg" class="form-label">Encadrant de stage : </label></td>
+				<td><label for="encadrantAcad" class="form-label">Encadrant académique : </label></td>
+			</tr>
+			<tr>
+				<td><input class="form-control" type="text" class="form-control" id="encadrantStg"  name="encadrantStg" [(ngModel)]="stage.encadrantStg"></td>
+				<td><input class="form-control" type="text" class="form-control" id="encadrantAcad" name="encadrantAcad" [(ngModel)]="stage.encadrantAcad"></td>	
+			</tr>				
+			<tr>
+				<td><label for="description" class="form-label">Description : </label></td>
+				<td><label for="dureestage" class="form-label">Durée de stage : </label></td>
+			</tr>
+			<tr>
+				<td><input class="form-control" type="text" class="form-control" id="description"  name="description" [(ngModel)]="stage.description"></td>
+				<td><input class="form-control" type="text" class="form-control" id="dureestage" name="dureestage" [(ngModel)]="stage.dureestage"></td>
+			</tr>
+			<tr>
+				<button  (click)="updatevalid(stage.cne)">Modifier </button>
+				<td><button (click)="annuler()">Annuler</button></td>
+			</tr>
+		</table>
+	</form> 
+</div>
+</body>
+</html>
+	 
+   
+   
+   
+   
+   
+   
+   <!-- <div class="main">  	
+		 
+			  <div class="modifier">
+				<form>
+					<h5 class="title">Ajouter un stage</h5>
+					<br>
+					<input type="text" placeholder="CNE" >
+                    <input type="text" placeholder="Intitule" >
+                    <input type="text" placeholder="Entreprise" >
+					<input type="email" placeholder="Email de l'entreprise" >
+					<input type="text" placeholder="Encadrant académique" >
+                    <input type="text" placeholder="Encadrant de stage" >
+					<input type="text" placeholder="Sujet" >
+                    <textarea hidden="Description de l'entreprise" ></textarea>
+					<br>
+          <button>Ajouter</button>
+				</form>
+			  </div>
+	  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div >
+   
+ <h3 style="color:rgb(40, 102, 117);margin:auto; margin-left: 350px;">Ajouter un stage</h3>
+ <br>
+ <br>
+ <form  (ngSubmit)="addstage()">
+   
+
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Id etudiant : </label>
+        <input type="text" class="form-control" id="userId"  name="userId" [(ngModel)]="stage.userId">
+      </div>
+
+     <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">durée de Stage : </label>
+        <input type="text" class="form-control" id="dureestage" name="dureestage" [(ngModel)]="stage.dureestage"> 
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Sujet de projet : </label>
+        <input type="text" class="form-control" id="sujet" name="sujet" [(ngModel)]="stage.sujet">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Entreprise : </label>
+        <input type="text" class="form-control" id="nomentreprise" name="nomentreprise" [(ngModel)]="stage.nomentreprise">
+      </div>
+
+       <button type="submit" class="btn btn-primary">Valider</button>
+       
+      
+
+
+
+   </form> 
+
+</div>-->

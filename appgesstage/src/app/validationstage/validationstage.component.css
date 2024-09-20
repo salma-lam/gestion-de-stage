@@ -1,0 +1,95 @@
+body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	font-family: 'Arial','Jost', sans-serif;
+	background: white;
+}
+.main{
+	width: 1000;
+	height: 600px;
+    margin-left: 330px;
+    justify-content: center;
+	background: rgb(255, 255, 255);
+	overflow: hidden;
+	border-radius: 10px;
+}
+#chk{
+	display: none;
+    font-size: 25px;
+}
+.title{
+    text-align: center;
+    color: #8902b3;
+    font-size: 25px;
+	font-family: Arial Black;
+	padding-left: 50px;
+}
+.color{
+    color: #573b8a;
+}
+button{
+	width: 60px;
+	height: 40px;
+	justify-content: center;
+	display: block;
+	color: #ffffff;
+	background: #8902b3;
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+button:hover{
+	background: #b77dc9;
+}
+#chk:checked ~ .login{
+	transform: translateY(-500px);
+}
+#chk:checked ~ .login label{
+	transform: scale(1);	
+}
+#chk:checked ~ .signup label{
+	transform: scale(.6);
+}
+#h{
+    text-align: center;
+	font-family: Arial rgb(0, 0, 0);
+    font-size: 30px;
+    color: #000000;
+}
+.w3-bar-block{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+}
+td{
+	width: 70px;
+    padding: 12px;
+}
+th{
+	width: 70px;
+	padding: 10px;
+}
+table{
+    width: 1000px;
+	height: 9px;
+    border:1px solid rgb(143, 65, 153);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+span{
+	color: white;
+}
+input{
+	border: none;
+	width: 90px;
+	
+	
+}
+
+

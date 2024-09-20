@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gestion Stage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+</head>
+<body>
+
+<nav class="w3-sidebar w3-collapse  w3-animate-left " style="z-index:3;width:300px; background: linear-gradient(to bottom, #58447e, #8902b3);
+;" id="mySidebar"><br>
+	<div class="w3-container w3-row">
+	  <div class="w3-col s4">
+		<img src="photo.jpeg" class="w3-circle w3-margin-right" style="width:50px" >
+	  </div>
+	  <div class="w3-col s8 w3-bar">
+        <span>Bienvenue, <strong>Monsieur/Madame</strong></span>
+      </div>
+    </div>
+    <hr>
+    <div class="w3-container">
+      <h2 id="h1" style="color:rgb(255, 255, 255);"><b>Espace chef de département</b></h2>
+    </div>
+	<br>
+	<div class="w3-bar-block" >&nbsp;&nbsp;&nbsp;
+		<svg xmlns="http://www.w3.org/2000/svg"  width="19" height="19" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+			<path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
+		  </svg>
+		  
+		  <a   routerLink="stage" (click)="home()"><i class="bi bi-house"></i>&nbsp;&nbsp; Home</a><br>&nbsp;
+            <a  class="w3-bar-item w3-button w3-padding "  (click)="vissualistage()" routerLink="visualisation"><i class="fa fa-eye fa-fw"></i>&nbsp; Visualiser les stages</a><br>
+            <a href="#" class="w3-bar-item w3-button w3-padding "  routerLink="validation"  (click)="validestage()"><i class="fa fa-users fa-fw"></i>&nbsp; Valider les stages</a><br>
+            <a href="#" class="w3-bar-item w3-button w3-padding" routerLink="attribution"  (click)="attnote()"><i class="fa fa-bullseye fa-fw"></i>&nbsp; Attribuer les notes</a><br>
+            <a href="#" class="w3-bar-item w3-button w3-padding" routerLink="attributionjur"  (click)="attnjury()"><i class="fa fa-bullseye fa-fw"></i>&nbsp; Attribuer les Jury</a><br>
+            <a  class="w3-bar-item w3-button w3-padding " routerLink="visualisation"  (click)="vissualidocu()"><i class="fa fa-eye fa-fw"></i>&nbsp; Visualiser les documents</a><br>
+             
+          </div>
+  </nav>
+ 
+	  <div class="main">  	
+        <input type="checkbox" id="chk" aria-hidden="true">
+            <div class="modifier">
+              <form    >
+                  <h5 class="title">Attribuer les jurys </h5>
+                  <br><br><br><br>
+                  <label>Entrer le CNE de l'étudiant :</label>
+                  <input type="text" class="form-control" placeholder="CNE" id="cne" name="cne" [(ngModel)]="attribuerjury.cne">
+                  <br><br>
+                  <label>Entrer jurys :</label>
+                  <textarea class="jury" class="form-control" id="cne" placeholder="Entrer les nom des jurys" name="cne" [(ngModel)]="attribuerjury.jury">
+                 
+                   </textarea>
+                  <br><br>
+                  <button type="submit" (click)="addattribuerjury()">Valider</button>
+                  <button (click)="annuler()">Annuler</button>
+              </form>
+            </div>
+    </div>
+  </body>
+  </html>

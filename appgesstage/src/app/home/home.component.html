@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gestion Stage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+</head>
+<body>
+
+<nav class="w3-sidebar w3-collapse  w3-animate-left " style="z-index:3;width:300px; background: linear-gradient(to bottom, #58447e, #8902b3);
+;" id="mySidebar"><br>
+	<div class="w3-container w3-row">
+	  <div class="w3-col s4">
+		<img src="photo.jpeg" class="w3-circle w3-margin-right" style="width:50px" >
+  
+	  </div>
+     
+	  <div class="w3-col s8 w3-bar">
+        <span>Bienvenue <strong>Monsieur/Madame </strong>  <span style="color:red ;" > {{logincheffiliere.fullname}} </span> </span>
+        <br>
+        <br>
+        <a style="color:white ;" href=""  >   Déconnecter</a>
+      </div>
+      <br>
+      
+    </div>
+    <hr>
+    <div class="w3-container">
+      <h2 id="h2" style="color:rgb(255, 255, 255);"><b>Espace chef de département</b></h2>
+    </div>
+	<br>
+	<div class="w3-bar-block" >
+            <a  class="w3-bar-item w3-button w3-padding "  (click)="vissualistage()" routerLink="visualisation"><i class="fa fa-eye fa-fw"></i>&nbsp; Visualiser les stages</a><br>
+            <a href="#" class="w3-bar-item w3-button w3-padding "  routerLink="validation"  (click)="validestage()"><i class="fa fa-users fa-fw"></i>&nbsp; Valider les stages</a><br>
+            <a href="#" class="w3-bar-item w3-button w3-padding" routerLink="attribution"  (click)="attnote()"><i class="fa fa-bullseye fa-fw"></i>&nbsp; Attribuer les notes</a><br>
+            <a href="#" class="w3-bar-item w3-button w3-padding" routerLink="attributionjur"  (click)="attnjury()"><i class="fa fa-bullseye fa-fw"></i>&nbsp; Attribuer les Jury</a><br>
+            <a  class="w3-bar-item w3-button w3-padding "  routerLink="visualisationdocu"  (click)="vissualidocu()"><i class="fa fa-eye fa-fw"></i>&nbsp; Visualiser les documents</a><br>
+             
+          </div>
+  </nav>
+  </body>
+  <h1 id="h1">Bienvenue</h1>
+  <img src="home.jpeg"  style="width: 900px;margin-left:400px;" class="img" >
+  </html>
+	
+
