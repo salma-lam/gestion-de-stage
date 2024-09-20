@@ -1,3 +1,9 @@
+# Forcer Java comme langage principal
 *.java linguist-language=Java
-*.ts linguist-detectable=false
+
+# Exclure les fichiers non-Java de la détection
 *.html linguist-detectable=false
+*.ts linguist-detectable=false
+*.css linguist-detectable=false
+*.js linguist-detectable=false
+*.json linguist-detectable=false
