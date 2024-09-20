@@ -5,7 +5,7 @@
 *.html linguist-detectable=false
 *.css linguist-detectable=false
 *.js linguist-detectable=false
-*.typscript linguist-detectable=false
+*.ts linguist-detectable=false
 *.json linguist-detectable=false
 *.md linguist-detectable=false
 
